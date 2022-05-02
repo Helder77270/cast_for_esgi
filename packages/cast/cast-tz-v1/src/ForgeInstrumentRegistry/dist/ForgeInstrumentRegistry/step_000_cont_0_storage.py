@@ -1,0 +1,1 @@
+sp.record(eventSinkContractAddress = sp.address('tz1@SINK@'), factories = {}, registrarAddress = sp.address('tz1@REGISTRAR@'), tokensByIsinCode = {}, tokensByName = {})

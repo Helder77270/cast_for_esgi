@@ -1,0 +1,4 @@
+{
+  "prim": "Pair",
+  "args": [ { "prim": "Pair", "args": [ { "string": "tz1@SINK@" }, [] ] }, { "prim": "Pair", "args": [ { "string": "tz1@REGISTRAR@" }, { "prim": "Pair", "args": [ [], [] ] } ] } ]
+}

@@ -1,0 +1,7 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> missing storage
+ => src/emtn/ForgeEmtn/dist/ForgeEmtn/step_000_cont_0_sizes.csv 2
+ => src/emtn/ForgeEmtn/dist/ForgeEmtn/step_000_cont_0_types.py 7
+ => src/emtn/ForgeEmtn/dist/ForgeEmtn/step_000_cont_0_contract.tz 747
+ => src/emtn/ForgeEmtn/dist/ForgeEmtn/step_000_cont_0_contract.json 1260
+ => src/emtn/ForgeEmtn/dist/ForgeEmtn/step_000_cont_0_contract.py 51

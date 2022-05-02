@@ -1,0 +1,231 @@
+{
+  "contractName": "IInstrument",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getType",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getType\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IInstrument.sol\":\"IInstrument\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IInstrument.sol\":{\"keccak256\":\"0x03618e45fb468d5eb0f8c12a24a7dcc4343103598e81f9b099a01d538d067de7\",\"urls\":[\"bzz-raw://1d1e1d07f27e97efeca36f27515138b61b1d412d5a075c76718ab99d49ed6984\",\"dweb:/ipfs/QmeDqChnfzjrvy7KjmBMBoctyVtUaC9oKTjesjusBJ21HG\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.0;\n\n// For the moment, only Type Bond in ETH\ninterface IInstrument {\n    function getType() external view returns (string memory);\n}\n",
+  "sourcePath": "/home/helder/Documents/cast1/packages/cast/cast-eth-v1/contracts/interfaces/IInstrument.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IInstrument.sol",
+    "exportedSymbols": {
+      "IInstrument": [
+        1574
+      ]
+    },
+    "id": 1575,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1568,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1574,
+        "linearizedBaseContracts": [
+          1574
+        ],
+        "name": "IInstrument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "15dae03e",
+            "id": 1573,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1569,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "109:2:8"
+            },
+            "returnParameters": {
+              "id": 1572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1571,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1573,
+                  "src": "135:13:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1570,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "134:15:8"
+            },
+            "scope": 1574,
+            "src": "93:57:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1575,
+        "src": "65:87:8"
+      }
+    ],
+    "src": "0:153:8"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IInstrument.sol",
+    "exportedSymbols": {
+      "IInstrument": [
+        1574
+      ]
+    },
+    "id": 1575,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1568,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:8"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1574,
+        "linearizedBaseContracts": [
+          1574
+        ],
+        "name": "IInstrument",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "15dae03e",
+            "id": 1573,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1569,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "109:2:8"
+            },
+            "returnParameters": {
+              "id": 1572,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1571,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1573,
+                  "src": "135:13:8",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1570,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "135:6:8",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "134:15:8"
+            },
+            "scope": 1574,
+            "src": "93:57:8",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1575,
+        "src": "65:87:8"
+      }
+    ],
+    "src": "0:153:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-02T09:34:45.040Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

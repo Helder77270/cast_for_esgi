@@ -1,0 +1,7 @@
+Creating contract KT1Tezooo2zzSmartPyzzSTATiCzzzwqqQ4H
+ -> missing storage
+ => src/bond/ForgeBond/dist/ForgeBond/step_000_cont_2_sizes.csv 2
+ => src/bond/ForgeBond/dist/ForgeBond/step_000_cont_2_types.py 7
+ => src/bond/ForgeBond/dist/ForgeBond/step_000_cont_2_contract.tz 747
+ => src/bond/ForgeBond/dist/ForgeBond/step_000_cont_2_contract.json 1260
+ => src/bond/ForgeBond/dist/ForgeBond/step_000_cont_2_contract.py 51

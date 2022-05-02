@@ -1,0 +1,10 @@
+Creating contract KT1Tezooo5zzSmartPyzzSTATiCzzzz48Z4p
+ -> (Pair (Pair "tz1@ADMIN@" {}) (Pair "tz1@SINK@" "tz1@REGISTRAR@"))
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_storage.tz 1
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_storage.json 4
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_sizes.csv 2
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_storage.py 1
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_types.py 7
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_contract.tz 944
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_contract.json 1737
+ => src/bond/ForgeBondFactory/dist/ForgeBondFactory/step_000_cont_5_contract.py 29

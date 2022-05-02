@@ -1,0 +1,109 @@
+{
+  "contractName": "IBasicToken",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/IBasicToken.sol\":\"IBasicToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/IBasicToken.sol\":{\"keccak256\":\"0x1949d8c31b5780cdc8a93a5d2a5de31a4574e476c4a99423d90ce7e833383ecb\",\"urls\":[\"bzz-raw://afaf370372bb3d7ec2e5a872f755f483a310f897db7eed9eecef323dfa7ab283\",\"dweb:/ipfs/QmX4r8XU6ALseYgYNpmH9E2rk12Nv9Uw43oThNb2mGRsNM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.0;\n\ninterface IBasicToken {}\n",
+  "sourcePath": "/home/helder/Documents/cast1/packages/cast/cast-eth-v1/contracts/interfaces/IBasicToken.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/IBasicToken.sol",
+    "exportedSymbols": {
+      "IBasicToken": [
+        1566
+      ]
+    },
+    "id": 1567,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1565,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1566,
+        "linearizedBaseContracts": [
+          1566
+        ],
+        "name": "IBasicToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1567,
+        "src": "24:24:7"
+      }
+    ],
+    "src": "0:49:7"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/IBasicToken.sol",
+    "exportedSymbols": {
+      "IBasicToken": [
+        1566
+      ]
+    },
+    "id": 1567,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1565,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:7"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": true,
+        "id": 1566,
+        "linearizedBaseContracts": [
+          1566
+        ],
+        "name": "IBasicToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1567,
+        "src": "24:24:7"
+      }
+    ],
+    "src": "0:49:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-02T09:34:45.040Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

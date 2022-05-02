@@ -1,0 +1,191 @@
+[
+  { "prim": "storage", "args": [ { "prim": "unit" } ] },
+  {
+    "prim": "parameter",
+    "args": [
+      {
+        "prim": "or",
+        "args": [
+          {
+            "prim": "or",
+            "args": [
+              {
+                "prim": "or",
+                "args": [
+                  {
+                    "prim": "pair",
+                    "args": [
+                      { "prim": "address", "annots": [ "%address" ] },
+                      { "prim": "pair", "args": [ { "prim": "string", "annots": [ "%isin" ] }, { "prim": "string", "annots": [ "%name" ] } ] }
+                    ],
+                    "annots": [ "%InstrumentListed" ]
+                  },
+                  {
+                    "prim": "pair",
+                    "args": [
+                      { "prim": "address", "annots": [ "%address" ] },
+                      { "prim": "pair", "args": [ { "prim": "string", "annots": [ "%isin" ] }, { "prim": "string", "annots": [ "%name" ] } ] }
+                    ],
+                    "annots": [ "%InstrumentUnlisted" ]
+                  }
+                ]
+              },
+              {
+                "prim": "or",
+                "args": [
+                  {
+                    "prim": "pair",
+                    "args": [ { "prim": "nat", "annots": [ "%settlementId" ] }, { "prim": "nat", "annots": [ "%settlementTransactionOperationType" ] } ],
+                    "annots": [ "%PaymentReceived" ]
+                  },
+                  {
+                    "prim": "or",
+                    "args": [
+                      {
+                        "prim": "pair",
+                        "args": [ { "prim": "nat", "annots": [ "%settlementId" ] }, { "prim": "nat", "annots": [ "%settlementTransactionOperationType" ] } ],
+                        "annots": [ "%PaymentTransferred" ]
+                      },
+                      { "prim": "nat", "annots": [ "%SubscriptionInitiated" ] }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "prim": "or",
+            "args": [
+              {
+                "prim": "or",
+                "args": [
+                  {
+                    "prim": "pair",
+                    "args": [
+                      { "prim": "address", "annots": [ "%_from" ] },
+                      { "prim": "pair", "args": [ { "prim": "address", "annots": [ "%_to" ] }, { "prim": "nat", "annots": [ "%_value" ] } ] }
+                    ],
+                    "annots": [ "%Transfer" ]
+                  },
+                  {
+                    "prim": "pair",
+                    "args": [
+                      { "prim": "pair", "args": [ { "prim": "address", "annots": [ "%owner" ] }, { "prim": "address", "annots": [ "%registrar" ] } ] },
+                      {
+                        "prim": "pair",
+                        "args": [
+                          { "prim": "address", "annots": [ "%settler" ] },
+                          {
+                            "prim": "pair",
+                            "args": [
+                              { "prim": "address", "annots": [ "%tokenAddress" ] },
+                              {
+                                "prim": "pair",
+                                "args": [
+                                  { "prim": "pair", "args": [ { "prim": "nat", "annots": [ "%initialSupply" ] }, { "prim": "string", "annots": [ "%isinCode" ] } ] },
+                                  { "prim": "pair", "args": [ { "prim": "string", "annots": [ "%name" ] }, { "prim": "string", "annots": [ "%symbol" ] } ] }
+                                ],
+                                "annots": [ "%tokenMetadata" ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "annots": [ "%forgeBondCreated" ]
+                  }
+                ]
+              },
+              {
+                "prim": "or",
+                "args": [
+                  {
+                    "prim": "pair",
+                    "args": [
+                      { "prim": "pair", "args": [ { "prim": "address", "annots": [ "%owner" ] }, { "prim": "address", "annots": [ "%registrar" ] } ] },
+                      {
+                        "prim": "pair",
+                        "args": [
+                          { "prim": "address", "annots": [ "%settler" ] },
+                          {
+                            "prim": "pair",
+                            "args": [
+                              { "prim": "address", "annots": [ "%tokenAddress" ] },
+                              {
+                                "prim": "pair",
+                                "args": [
+                                  { "prim": "pair", "args": [ { "prim": "nat", "annots": [ "%initialSupply" ] }, { "prim": "string", "annots": [ "%isinCode" ] } ] },
+                                  { "prim": "pair", "args": [ { "prim": "string", "annots": [ "%name" ] }, { "prim": "string", "annots": [ "%symbol" ] } ] }
+                                ],
+                                "annots": [ "%tokenMetadata" ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "annots": [ "%forgeStructuredProductCreated" ]
+                  },
+                  {
+                    "prim": "or",
+                    "args": [
+                      {
+                        "prim": "pair",
+                        "args": [
+                          { "prim": "address", "annots": [ "%by" ] },
+                          { "prim": "pair", "args": [ { "prim": "address", "annots": [ "%operator" ] }, { "prim": "nat", "annots": [ "%operatorRole" ] } ] }
+                        ],
+                        "annots": [ "%newOperator" ]
+                      },
+                      {
+                        "prim": "pair",
+                        "args": [
+                          { "prim": "address", "annots": [ "%by" ] },
+                          { "prim": "pair", "args": [ { "prim": "address", "annots": [ "%operator" ] }, { "prim": "nat", "annots": [ "%operatorRole" ] } ] }
+                        ],
+                        "annots": [ "%revokeOperator" ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "prim": "code",
+    "args": [
+      [
+        { "prim": "UNPAIR" },
+        {
+          "prim": "IF_LEFT",
+          "args": [
+            [
+              {
+                "prim": "IF_LEFT",
+                "args": [
+                  [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "DROP" } ] ] } ],
+                  [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "DROP" } ] ] } ] ] } ]
+                ]
+              }
+            ],
+            [
+              {
+                "prim": "IF_LEFT",
+                "args": [
+                  [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "DROP" } ] ] } ],
+                  [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "IF_LEFT", "args": [ [ { "prim": "DROP" } ], [ { "prim": "DROP" } ] ] } ] ] } ]
+                ]
+              }
+            ]
+          ]
+        },
+        { "prim": "NIL", "args": [ { "prim": "operation" } ] },
+        { "prim": "PAIR" }
+      ]
+    ]
+  }
+]

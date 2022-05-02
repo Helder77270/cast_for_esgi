@@ -1,0 +1,6 @@
+import smartpy as sp
+
+tstorage = sp.TRecord(admin = sp.TAddress, entrypointsBigMap = sp.TBigMap(sp.TBytes, sp.TBytes), eventSinkContractAddress = sp.TAddress, registrarAddress = sp.TAddress).layout((("admin", "entrypointsBigMap"), ("eventSinkContractAddress", "registrarAddress")))
+tparameter = sp.TVariant(createForgeBond = sp.TRecord(callable = sp.TBool, couponFrequencyInMonths = sp.TNat, currency = sp.TString, denomination = sp.TNat, divisor = sp.TNat, firstCouponDate = sp.TNat, initialMaturityDate = sp.TNat, initialSupply = sp.TNat, interestRateInBips = sp.TNat, isSoftBullet = sp.TBool, isinCode = sp.TString, name = sp.TString, owner = sp.TAddress, registrar = sp.TAddress, registryAddress = sp.TAddress, settler = sp.TAddress, softBulletPeriodInMonths = sp.TNat, startDate = sp.TNat, symbol = sp.TString).layout(("registryAddress", ("initialSupply", ("isinCode", ("name", ("symbol", ("denomination", ("divisor", ("startDate", ("initialMaturityDate", ("firstCouponDate", ("couponFrequencyInMonths", ("interestRateInBips", ("callable", ("isSoftBullet", ("softBulletPeriodInMonths", ("currency", ("registrar", ("settler", "owner"))))))))))))))))))), upgrade = sp.TMap(sp.TBytes, sp.TBytes)).layout(("createForgeBond", "upgrade"))
+tglobals = { }
+tviews = { }

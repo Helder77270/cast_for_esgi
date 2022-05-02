@@ -1,0 +1,298 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionOperationType",
+        "type": "uint256"
+      }
+    ],
+    "name": "PaymentReceived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionOperationType",
+        "type": "uint256"
+      }
+    ],
+    "name": "PaymentTransferred",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "settlementTransactionIds",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "RedemptionInitiated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "SettlementTransactionCanceled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "SubscriptionInitiated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "TradeInitiated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "txId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "operationId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "deliverySenderAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "deliveryReceiverAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deliveryQuantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "txHash",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+        "name": "partialSettlementTransaction",
+        "type": "tuple"
+      }
+    ],
+    "name": "initiateSubscription",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "txId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "operationId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "deliverySenderAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "deliveryReceiverAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deliveryQuantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "txHash",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+        "name": "partialSettlementTransaction",
+        "type": "tuple"
+      }
+    ],
+    "name": "initiateTrade",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "txId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "operationId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "deliverySenderAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "deliveryReceiverAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deliveryQuantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "txHash",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]",
+        "name": "settlementTransaction",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "initiateRedemption",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "txId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "operationId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "deliverySenderAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "deliveryReceiverAccountNumber",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deliveryQuantity",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "txHash",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+        "name": "partialSettlementTransaction",
+        "type": "tuple"
+      }
+    ],
+    "name": "cancelSettlementTransaction",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "confirmPaymentReceived",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "settlementTransactionId",
+        "type": "uint256"
+      }
+    ],
+    "name": "confirmPaymentTransferred",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

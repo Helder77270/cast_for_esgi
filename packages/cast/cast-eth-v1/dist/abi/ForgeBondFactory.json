@@ -1,0 +1,148 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "InstrumentCreated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "_instrumentAddress",
+        "type": "address"
+      }
+    ],
+    "name": "InstrumentListed",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "registryAddress",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "initialSupply",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "isinCode",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "denomination",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "divisor",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "initialMaturityDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "firstCouponDate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "couponFrequencyInMonths",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "interestRateInBips",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "callable",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isSoftBullet",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "softBulletPeriodInMonths",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "currency",
+            "type": "string"
+          },
+          {
+            "internalType": "address",
+            "name": "registrar",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "settler",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct BasicTokenLibrary.BasicTokenInput",
+        "name": "basicTokenInput",
+        "type": "tuple"
+      }
+    ],
+    "name": "createForgeBond",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

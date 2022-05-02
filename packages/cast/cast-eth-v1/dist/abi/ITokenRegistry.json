@@ -1,0 +1,53 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "name",
+        "type": "string"
+      }
+    ],
+    "name": "getTokenByName",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "tokenContractAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "isinCode",
+        "type": "string"
+      }
+    ],
+    "name": "getTokenByIsinCode",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "tokenContractAddress",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAllTokens",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "tokenContractAddresses",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -1,0 +1,1812 @@
+{
+  "contractName": "ISettlement",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionOperationType",
+          "type": "uint256"
+        }
+      ],
+      "name": "PaymentReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionOperationType",
+          "type": "uint256"
+        }
+      ],
+      "name": "PaymentTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256[]",
+          "name": "settlementTransactionIds",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "RedemptionInitiated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "SettlementTransactionCanceled",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "SubscriptionInitiated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "TradeInitiated",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "txId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "operationId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "deliverySenderAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "deliveryReceiverAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deliveryQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "txHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+          "name": "partialSettlementTransaction",
+          "type": "tuple"
+        }
+      ],
+      "name": "initiateSubscription",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "txId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "operationId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "deliverySenderAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "deliveryReceiverAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deliveryQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "txHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+          "name": "partialSettlementTransaction",
+          "type": "tuple"
+        }
+      ],
+      "name": "initiateTrade",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "txId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "operationId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "deliverySenderAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "deliveryReceiverAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deliveryQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "txHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]",
+          "name": "settlementTransaction",
+          "type": "tuple[]"
+        }
+      ],
+      "name": "initiateRedemption",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "txId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "operationId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "deliverySenderAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "deliveryReceiverAccountNumber",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deliveryQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "txHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SettlementRepositoryLibrary.PartialSettlementTransaction",
+          "name": "partialSettlementTransaction",
+          "type": "tuple"
+        }
+      ],
+      "name": "cancelSettlementTransaction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "confirmPaymentReceived",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "settlementTransactionId",
+          "type": "uint256"
+        }
+      ],
+      "name": "confirmPaymentTransferred",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionOperationType\",\"type\":\"uint256\"}],\"name\":\"PaymentReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionOperationType\",\"type\":\"uint256\"}],\"name\":\"PaymentTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256[]\",\"name\":\"settlementTransactionIds\",\"type\":\"uint256[]\"}],\"name\":\"RedemptionInitiated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"}],\"name\":\"SettlementTransactionCanceled\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"}],\"name\":\"SubscriptionInitiated\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"}],\"name\":\"TradeInitiated\",\"type\":\"event\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"txId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"deliverySenderAccountNumber\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"deliveryReceiverAccountNumber\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deliveryQuantity\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"txHash\",\"type\":\"string\"}],\"internalType\":\"struct SettlementRepositoryLibrary.PartialSettlementTransaction\",\"name\":\"partialSettlementTransaction\",\"type\":\"tuple\"}],\"name\":\"cancelSettlementTransaction\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"}],\"name\":\"confirmPaymentReceived\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"settlementTransactionId\",\"type\":\"uint256\"}],\"name\":\"confirmPaymentTransferred\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"txId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"deliverySenderAccountNumber\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"deliveryReceiverAccountNumber\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deliveryQuantity\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"txHash\",\"type\":\"string\"}],\"internalType\":\"struct SettlementRepositoryLibrary.PartialSettlementTransaction[]\",\"name\":\"settlementTransaction\",\"type\":\"tuple[]\"}],\"name\":\"initiateRedemption\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"txId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"deliverySenderAccountNumber\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"deliveryReceiverAccountNumber\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deliveryQuantity\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"txHash\",\"type\":\"string\"}],\"internalType\":\"struct SettlementRepositoryLibrary.PartialSettlementTransaction\",\"name\":\"partialSettlementTransaction\",\"type\":\"tuple\"}],\"name\":\"initiateSubscription\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"txId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"operationId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"deliverySenderAccountNumber\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"deliveryReceiverAccountNumber\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"deliveryQuantity\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"txHash\",\"type\":\"string\"}],\"internalType\":\"struct SettlementRepositoryLibrary.PartialSettlementTransaction\",\"name\":\"partialSettlementTransaction\",\"type\":\"tuple\"}],\"name\":\"initiateTrade\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ISettlement.sol\":\"ISettlement\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0x29c462775f5b4c76dce400f120f3530aa3f81da42c839f975dc2b64784d22434\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://063db5d664d3d5bae10d0056c9d00339265229532d06b53d5f2e91778b2e428d\",\"dweb:/ipfs/QmWM92rU59t6BcZSj4w6ikoPL32R9hyTMb9Msg5X8vvu1s\"]},\"project:/contracts/interfaces/IOperatorManager.sol\":{\"keccak256\":\"0x67414db5c26e9e14c7fdffa7fb4b1811a6ba4c0e8f2f71f905e11dd9739da7c4\",\"urls\":[\"bzz-raw://3f3807710bfb3ee740ce54d78e68a5b5f93fad4c7fa7f931e21610ab197d1d5f\",\"dweb:/ipfs/QmYzfTEyZxfXjvxkzbjre8j4c4VYdGsHUunuLwKmLu1T92\"]},\"project:/contracts/interfaces/ISettlement.sol\":{\"keccak256\":\"0x78d09154696c521f6beeec2842994e7949bb73af19c5382c33c49065806dd181\",\"urls\":[\"bzz-raw://2c8306c2ea4937d34b92c5499cd5c703877a26d4522a6f5edc5f28dfa88ecf5a\",\"dweb:/ipfs/QmRQBzFLkVrm8fYGnMtBAaZFjTeGzuDhKCxUjW149eNWM6\"]},\"project:/contracts/libraries/BasicTokenLibrary.sol\":{\"keccak256\":\"0x2240bae3c13f98171d0c4f9ec3f8a8197794c2432e875db01240ea197c31a0a8\",\"urls\":[\"bzz-raw://2edcfaf3800d3db3a86e41d429521725dd3c63f767295b6d102b88e3620fc71d\",\"dweb:/ipfs/QmZ38adTSJyfbwYSVqY8JxS1PNaqmnzkNyy4QBGtxTQFyX\"]},\"project:/contracts/libraries/IterableBalances.sol\":{\"keccak256\":\"0x1ab45c354eae68554ea2c0aa08a5995e1bea01081c8e7f20de61eebebad8f09c\",\"urls\":[\"bzz-raw://65a62f1d4745bd354c7da18c89f9567e082e18f4dab5a28205687dc993b0cfea\",\"dweb:/ipfs/QmPppJQpWneeY2XuHo9gr1FjN55xf2qUiccAYBVcpjiWRL\"]},\"project:/contracts/libraries/SecurityTokenBalancesLibrary.sol\":{\"keccak256\":\"0xdc0ff128052ef7de71df7396bdd787e383bd5d73155248bcc514712a37f242ab\",\"urls\":[\"bzz-raw://23ef32e509cc0456f26a404e695668fde7a983739f8d7515f43b22609c016772\",\"dweb:/ipfs/QmarxgJabyiF3cjRrhABny5B3WeoXGansEFhpZ8Abr9m4j\"]},\"project:/contracts/libraries/SettlementRepositoryLibrary.sol\":{\"keccak256\":\"0x1ba42a41092b0f29f8321b972273a3e66c2a66bbe884b06280871d8300b2f654\",\"urls\":[\"bzz-raw://bb4f3ce32366b1e37fbc1c3cba42b84f30ffcf682a4eb5716b1addb05817c479\",\"dweb:/ipfs/QmTH6coULZp5oumwjqfXc2crv3Xk3nfVb5rvvYXDbukoTC\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.0;\npragma experimental ABIEncoderV2;\n\nimport \"../libraries/SettlementRepositoryLibrary.sol\";\n\ninterface ISettlement {\n    function initiateSubscription(\n        SettlementRepositoryLibrary.PartialSettlementTransaction\n            calldata partialSettlementTransaction\n    ) external;\n\n    function initiateTrade(\n        SettlementRepositoryLibrary.PartialSettlementTransaction\n            calldata partialSettlementTransaction\n    ) external;\n\n    function initiateRedemption(\n        SettlementRepositoryLibrary.PartialSettlementTransaction[]\n            calldata settlementTransaction\n    ) external;\n\n    function cancelSettlementTransaction(\n        SettlementRepositoryLibrary.PartialSettlementTransaction\n            calldata partialSettlementTransaction\n    ) external;\n\n    function confirmPaymentReceived(uint256 settlementTransactionId) external;\n\n    function confirmPaymentTransferred(uint256 settlementTransactionId)\n        external;\n\n    event SubscriptionInitiated(uint256 settlementTransactionId);\n    event TradeInitiated(uint256 settlementTransactionId);\n    event RedemptionInitiated(uint256[] settlementTransactionIds);\n    event PaymentReceived(\n        uint256 settlementTransactionId,\n        uint256 settlementTransactionOperationType\n    );\n    event PaymentTransferred(\n        uint256 settlementTransactionId,\n        uint256 settlementTransactionOperationType\n    );\n    event SettlementTransactionCanceled(uint256 settlementTransactionId);\n}\n",
+  "sourcePath": "/home/helder/Documents/cast1/packages/cast/cast-eth-v1/contracts/interfaces/ISettlement.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ISettlement.sol",
+    "exportedSymbols": {
+      "BasicTokenLibrary": [
+        1831
+      ],
+      "IOperatorManager": [
+        1643
+      ],
+      "ISettlement": [
+        1712
+      ],
+      "IterableBalances": [
+        2104
+      ],
+      "SafeMath": [
+        311
+      ],
+      "SecurityTokenBalancesLibrary": [
+        2736
+      ],
+      "SettlementRepositoryLibrary": [
+        2991
+      ]
+    },
+    "id": 1713,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1645,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:11"
+      },
+      {
+        "id": 1646,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:11"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/SettlementRepositoryLibrary.sol",
+        "file": "../libraries/SettlementRepositoryLibrary.sol",
+        "id": 1647,
+        "nodeType": "ImportDirective",
+        "scope": 1713,
+        "sourceUnit": 2992,
+        "src": "58:54:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1712,
+        "linearizedBaseContracts": [
+          1712
+        ],
+        "name": "ISettlement",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e109ca7a",
+            "id": 1653,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateSubscription",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1650,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1653,
+                  "src": "181:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1649,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1648,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "181:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "181:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "171:122:11"
+            },
+            "returnParameters": {
+              "id": 1652,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "302:0:11"
+            },
+            "scope": 1712,
+            "src": "142:161:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c4842b6c",
+            "id": 1659,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateTrade",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1657,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1656,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1659,
+                  "src": "341:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1655,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1654,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "341:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "341:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "331:122:11"
+            },
+            "returnParameters": {
+              "id": 1658,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "462:0:11"
+            },
+            "scope": 1712,
+            "src": "309:154:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "61146a25",
+            "id": 1666,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateRedemption",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1663,
+                  "mutability": "mutable",
+                  "name": "settlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "506:101:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PartialSettlementTransaction_$2810_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1661,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1660,
+                        "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2810,
+                        "src": "506:56:11"
+                      },
+                      "referencedDeclaration": 2810,
+                      "src": "506:56:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                        "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                      }
+                    },
+                    "id": 1662,
+                    "nodeType": "ArrayTypeName",
+                    "src": "506:58:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PartialSettlementTransaction_$2810_storage_$dyn_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "496:117:11"
+            },
+            "returnParameters": {
+              "id": 1665,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "622:0:11"
+            },
+            "scope": 1712,
+            "src": "469:154:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "40635738",
+            "id": 1672,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelSettlementTransaction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1669,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "675:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1668,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1667,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "675:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "675:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "665:122:11"
+            },
+            "returnParameters": {
+              "id": 1671,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "796:0:11"
+            },
+            "scope": 1712,
+            "src": "629:168:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e3406ff6",
+            "id": 1677,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "confirmPaymentReceived",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1674,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1677,
+                  "src": "835:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1673,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "835:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "834:33:11"
+            },
+            "returnParameters": {
+              "id": 1676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "876:0:11"
+            },
+            "scope": 1712,
+            "src": "803:74:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e96b3828",
+            "id": 1682,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "confirmPaymentTransferred",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1679,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "918:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1678,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "918:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "917:33:11"
+            },
+            "returnParameters": {
+              "id": 1681,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "967:0:11"
+            },
+            "scope": 1712,
+            "src": "883:85:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "id": 1686,
+            "name": "SubscriptionInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1684,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1686,
+                  "src": "1002:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1683,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1002:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1001:33:11"
+            },
+            "src": "974:61:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1690,
+            "name": "TradeInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "1061:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1061:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1060:33:11"
+            },
+            "src": "1040:54:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1695,
+            "name": "RedemptionInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1694,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1693,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionIds",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1695,
+                  "src": "1125:34:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1691,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1125:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 1692,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1125:9:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1124:36:11"
+            },
+            "src": "1099:62:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1701,
+            "name": "PaymentReceived",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1697,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1701,
+                  "src": "1197:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1696,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1197:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1699,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionOperationType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1701,
+                  "src": "1238:42:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1698,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1238:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1187:99:11"
+            },
+            "src": "1166:121:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1707,
+            "name": "PaymentTransferred",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1703,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "1326:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1702,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1326:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1705,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionOperationType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "1367:42:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1704,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1367:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1316:99:11"
+            },
+            "src": "1292:124:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1711,
+            "name": "SettlementTransactionCanceled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1710,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1709,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1711,
+                  "src": "1457:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1708,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1457:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1456:33:11"
+            },
+            "src": "1421:69:11"
+          }
+        ],
+        "scope": 1713,
+        "src": "114:1378:11"
+      }
+    ],
+    "src": "0:1493:11"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ISettlement.sol",
+    "exportedSymbols": {
+      "BasicTokenLibrary": [
+        1831
+      ],
+      "IOperatorManager": [
+        1643
+      ],
+      "ISettlement": [
+        1712
+      ],
+      "IterableBalances": [
+        2104
+      ],
+      "SafeMath": [
+        311
+      ],
+      "SecurityTokenBalancesLibrary": [
+        2736
+      ],
+      "SettlementRepositoryLibrary": [
+        2991
+      ]
+    },
+    "id": 1713,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1645,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:11"
+      },
+      {
+        "id": 1646,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "23:33:11"
+      },
+      {
+        "absolutePath": "project:/contracts/libraries/SettlementRepositoryLibrary.sol",
+        "file": "../libraries/SettlementRepositoryLibrary.sol",
+        "id": 1647,
+        "nodeType": "ImportDirective",
+        "scope": 1713,
+        "sourceUnit": 2992,
+        "src": "58:54:11",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1712,
+        "linearizedBaseContracts": [
+          1712
+        ],
+        "name": "ISettlement",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e109ca7a",
+            "id": 1653,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateSubscription",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1650,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1653,
+                  "src": "181:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1649,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1648,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "181:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "181:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "171:122:11"
+            },
+            "returnParameters": {
+              "id": 1652,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "302:0:11"
+            },
+            "scope": 1712,
+            "src": "142:161:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "c4842b6c",
+            "id": 1659,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateTrade",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1657,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1656,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1659,
+                  "src": "341:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1655,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1654,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "341:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "341:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "331:122:11"
+            },
+            "returnParameters": {
+              "id": 1658,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "462:0:11"
+            },
+            "scope": 1712,
+            "src": "309:154:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "61146a25",
+            "id": 1666,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initiateRedemption",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1664,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1663,
+                  "mutability": "mutable",
+                  "name": "settlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1666,
+                  "src": "506:101:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_PartialSettlementTransaction_$2810_calldata_ptr_$dyn_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1661,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 1660,
+                        "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 2810,
+                        "src": "506:56:11"
+                      },
+                      "referencedDeclaration": 2810,
+                      "src": "506:56:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                        "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                      }
+                    },
+                    "id": 1662,
+                    "nodeType": "ArrayTypeName",
+                    "src": "506:58:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_PartialSettlementTransaction_$2810_storage_$dyn_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "496:117:11"
+            },
+            "returnParameters": {
+              "id": 1665,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "622:0:11"
+            },
+            "scope": 1712,
+            "src": "469:154:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "40635738",
+            "id": 1672,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "cancelSettlementTransaction",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1670,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1669,
+                  "mutability": "mutable",
+                  "name": "partialSettlementTransaction",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1672,
+                  "src": "675:106:11",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_calldata_ptr",
+                    "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                  },
+                  "typeName": {
+                    "id": 1668,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 1667,
+                      "name": "SettlementRepositoryLibrary.PartialSettlementTransaction",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 2810,
+                      "src": "675:56:11"
+                    },
+                    "referencedDeclaration": 2810,
+                    "src": "675:56:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PartialSettlementTransaction_$2810_storage_ptr",
+                      "typeString": "struct SettlementRepositoryLibrary.PartialSettlementTransaction"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "665:122:11"
+            },
+            "returnParameters": {
+              "id": 1671,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "796:0:11"
+            },
+            "scope": 1712,
+            "src": "629:168:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e3406ff6",
+            "id": 1677,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "confirmPaymentReceived",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1675,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1674,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1677,
+                  "src": "835:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1673,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "835:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "834:33:11"
+            },
+            "returnParameters": {
+              "id": 1676,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "876:0:11"
+            },
+            "scope": 1712,
+            "src": "803:74:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "e96b3828",
+            "id": 1682,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "confirmPaymentTransferred",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1680,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1679,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1682,
+                  "src": "918:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1678,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "918:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "917:33:11"
+            },
+            "returnParameters": {
+              "id": 1681,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "967:0:11"
+            },
+            "scope": 1712,
+            "src": "883:85:11",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "anonymous": false,
+            "id": 1686,
+            "name": "SubscriptionInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1684,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1686,
+                  "src": "1002:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1683,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1002:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1001:33:11"
+            },
+            "src": "974:61:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1690,
+            "name": "TradeInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1689,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1688,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1690,
+                  "src": "1061:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1687,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1061:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1060:33:11"
+            },
+            "src": "1040:54:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1695,
+            "name": "RedemptionInitiated",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1694,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1693,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionIds",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1695,
+                  "src": "1125:34:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1691,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1125:7:11",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 1692,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1125:9:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1124:36:11"
+            },
+            "src": "1099:62:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1701,
+            "name": "PaymentReceived",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1700,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1697,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1701,
+                  "src": "1197:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1696,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1197:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1699,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionOperationType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1701,
+                  "src": "1238:42:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1698,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1238:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1187:99:11"
+            },
+            "src": "1166:121:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1707,
+            "name": "PaymentTransferred",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1706,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1703,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "1326:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1702,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1326:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1705,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionOperationType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1707,
+                  "src": "1367:42:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1704,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1367:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1316:99:11"
+            },
+            "src": "1292:124:11"
+          },
+          {
+            "anonymous": false,
+            "id": 1711,
+            "name": "SettlementTransactionCanceled",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 1710,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1709,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "settlementTransactionId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1711,
+                  "src": "1457:31:11",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1708,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1457:7:11",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1456:33:11"
+            },
+            "src": "1421:69:11"
+          }
+        ],
+        "scope": 1713,
+        "src": "114:1378:11"
+      }
+    ],
+    "src": "0:1493:11"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-02T09:34:45.042Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

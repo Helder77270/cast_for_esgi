@@ -1,0 +1,22 @@
+
+> nx run cast-interface-v1:build  [existing outputs match the cache, left as is]
+
+
+> @castframework/cast-interface-v1@0.8.3 build
+> npm run clean && npm run compile
+
+
+> @castframework/cast-interface-v1@0.8.3 clean
+> $(npm bin)/rimraf dist/* tsconfig.tsbuildinfo
+
+
+> @castframework/cast-interface-v1@0.8.3 compile
+> $(npm bin)/tsc -b
+
+
+ 
+
+ >  NX   Successfully ran target build for project cast-interface-v1
+
+   Nx read the output from the cache instead of running the command for 1 out of 1 tasks.
+

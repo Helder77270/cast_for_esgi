@@ -1,0 +1,613 @@
+{
+  "contractName": "ITokenRegistry",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "getTokenByName",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContractAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "isinCode",
+          "type": "string"
+        }
+      ],
+      "name": "getTokenByIsinCode",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "tokenContractAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllTokens",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "tokenContractAddresses",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.0+commit.c7dfd78e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getAllTokens\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"tokenContractAddresses\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"isinCode\",\"type\":\"string\"}],\"name\":\"getTokenByIsinCode\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"tokenContractAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"getTokenByName\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"tokenContractAddress\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ITokenRegistry.sol\":\"ITokenRegistry\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ITokenRegistry.sol\":{\"keccak256\":\"0x9168a8bfccca6ec848741b1b9821ede30f1eab21f5f1c6624bff4245b134b89f\",\"urls\":[\"bzz-raw://15f8fbb644ffc8b3bd2801ea0d4f5ca64a2f7b5d6946cddcc9ea5828c6794b5d\",\"dweb:/ipfs/QmU8t4bGt3eyQqrUZSvt5fRRdXYzkcf23Xrx25Z7b4gSPn\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.8.0;\n\ninterface ITokenRegistry {\n    function getTokenByName(string calldata name)\n        external\n        view\n        returns (address tokenContractAddress);\n\n    function getTokenByIsinCode(string calldata isinCode)\n        external\n        view\n        returns (address tokenContractAddress);\n\n    function getAllTokens()\n        external\n        view\n        returns (address[] memory tokenContractAddresses);\n}\n",
+  "sourcePath": "/home/helder/Documents/cast1/packages/cast/cast-eth-v1/contracts/interfaces/ITokenRegistry.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interfaces/ITokenRegistry.sol",
+    "exportedSymbols": {
+      "ITokenRegistry": [
+        1735
+      ]
+    },
+    "id": 1736,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1714,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1735,
+        "linearizedBaseContracts": [
+          1735
+        ],
+        "name": "ITokenRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e73fc0c3",
+            "id": 1721,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenByName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1717,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1716,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1721,
+                  "src": "79:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1715,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "79:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "78:22:12"
+            },
+            "returnParameters": {
+              "id": 1720,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1719,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1721,
+                  "src": "148:28:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1718,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "148:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:30:12"
+            },
+            "scope": 1735,
+            "src": "55:123:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "fcbfae71",
+            "id": 1728,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenByIsinCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1724,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1723,
+                  "mutability": "mutable",
+                  "name": "isinCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1728,
+                  "src": "212:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1722,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:26:12"
+            },
+            "returnParameters": {
+              "id": 1727,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1726,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1728,
+                  "src": "285:28:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1725,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "284:30:12"
+            },
+            "scope": 1735,
+            "src": "184:131:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "2a5c792a",
+            "id": 1734,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1729,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:2:12"
+            },
+            "returnParameters": {
+              "id": 1733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1732,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddresses",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1734,
+                  "src": "392:39:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1730,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "392:7:12",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1731,
+                    "nodeType": "ArrayTypeName",
+                    "src": "392:9:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:41:12"
+            },
+            "scope": 1735,
+            "src": "321:112:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1736,
+        "src": "24:411:12"
+      }
+    ],
+    "src": "0:436:12"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interfaces/ITokenRegistry.sol",
+    "exportedSymbols": {
+      "ITokenRegistry": [
+        1735
+      ]
+    },
+    "id": 1736,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1714,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:22:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1735,
+        "linearizedBaseContracts": [
+          1735
+        ],
+        "name": "ITokenRegistry",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "e73fc0c3",
+            "id": 1721,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenByName",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1717,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1716,
+                  "mutability": "mutable",
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1721,
+                  "src": "79:20:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1715,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "79:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "78:22:12"
+            },
+            "returnParameters": {
+              "id": 1720,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1719,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1721,
+                  "src": "148:28:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1718,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "148:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "147:30:12"
+            },
+            "scope": 1735,
+            "src": "55:123:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "fcbfae71",
+            "id": 1728,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenByIsinCode",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1724,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1723,
+                  "mutability": "mutable",
+                  "name": "isinCode",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1728,
+                  "src": "212:24:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1722,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "212:6:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "211:26:12"
+            },
+            "returnParameters": {
+              "id": 1727,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1726,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddress",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1728,
+                  "src": "285:28:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1725,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "285:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "284:30:12"
+            },
+            "scope": 1735,
+            "src": "184:131:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "2a5c792a",
+            "id": 1734,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAllTokens",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1729,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "342:2:12"
+            },
+            "returnParameters": {
+              "id": 1733,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1732,
+                  "mutability": "mutable",
+                  "name": "tokenContractAddresses",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1734,
+                  "src": "392:39:12",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 1730,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "392:7:12",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 1731,
+                    "nodeType": "ArrayTypeName",
+                    "src": "392:9:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:41:12"
+            },
+            "scope": 1735,
+            "src": "321:112:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1736,
+        "src": "24:411:12"
+      }
+    ],
+    "src": "0:436:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2022-05-02T09:34:45.044Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

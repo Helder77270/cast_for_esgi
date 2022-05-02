@@ -1,0 +1,10 @@
+{
+ "BasicTokenLibrary": "0x878084c814901E3B1fA715c26cAF3c1Eea47374c",
+ "ForgeBondFactory": "0xFc1CCCbbB30a23dd40997093B1788a1a5C8295A2",
+ "ForgeInstrumentRegistry": "0xF30ae1819A08d319B2e4C96F4F94ef1b9Bd991F8",
+ "IterableBalances": "0xF0aC3F71B86774A4FA99281f8Df74de81F1B000d",
+ "OperatorManagerLibrary": "0x42f08c3C139F83DC6B329b416c34Ee44F0159C84",
+ "SecurityTokenBalancesLibrary": "0xCd93f3F68F6241Fffe93Bd9b431DB595eD2f1065",
+ "SettlementRepositoryLibrary": "0x3EBB491405B45dbdD136C9C84D3f3cDD3eF4913d",
+ "SettlementWorkflowLibrary": "0x116Deab2E49a75caDC536870B35315388609005a"
+}

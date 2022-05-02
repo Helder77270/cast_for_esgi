@@ -1,0 +1,17 @@
+[
+ {
+  "shortname": "Instrument",
+  "longname": "Instrument",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"src/Instrument/Instrument_contract.py\" 12)) \nstorage (record (\"src/Instrument/Instrument_contract.py\" 12) )\nstorage_type (())\nmessages ()\nflags ((exceptions VerifyOrLine))\nglobals ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"src/Instrument/Instrument_contract.py\" 12))",
+    "line_no": "(\"\" -1)",
+    "show": true
+   }
+  ],
+  "kind": "compilation"
+ }
+]

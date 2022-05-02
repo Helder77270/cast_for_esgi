@@ -1,0 +1,10 @@
+Creating contract KT1Tezooo3zzSmartPyzzSTATiCzzzseJjWC
+ -> (Pair (Pair "tz1@ADMIN@" {}) (Pair "tz1@SINK@" "tz1@REGISTRAR@"))
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_storage.tz 1
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_storage.json 4
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_sizes.csv 2
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_storage.py 1
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_types.py 7
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_contract.tz 960
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_contract.json 1669
+ => src/emtn/ForgeEmtnFactory/dist/ForgeEmtnFactory/step_000_cont_3_contract.py 28

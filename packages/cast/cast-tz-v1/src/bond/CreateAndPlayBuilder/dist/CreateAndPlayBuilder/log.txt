@@ -1,0 +1,10 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> (Pair "tz1@ADMIN@" {})
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_storage.tz 1
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_storage.json 1
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_sizes.csv 2
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_storage.py 1
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_types.py 7
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_contract.tz 1097
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_contract.json 982
+ => src/bond/CreateAndPlayBuilder/dist/CreateAndPlayBuilder/step_000_cont_0_contract.py 97
